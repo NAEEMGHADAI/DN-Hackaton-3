@@ -1,3 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+header {
+  padding: 20px 10px;
+  background-image: url("../assets/images/header-image.jpg");
+  background-color: #cccccc;
+  height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+nav {
+  position: fixed;
+  display: flex;
+  font-size: 20px;
+  width: 100%;
+}
+
+.nav-1 {
+  /* justify-content: flex-start; */
+  display: flex;
+  flex-grow: 2;
+  column-gap: 20px;
+}
+.nav-2 {
+  /* justify-content: flex-end; */
+  padding-right: 20px;
+  display: flex;
+  column-gap: 20px;
+}
+#title {
+  color: red;
+  font-weight: bold;
+  font-size: 25px;
+  padding-top: 0px;
+}
+
+.login {
+  color: white;
+  padding: 5px 40px;
+  margin-right: 20px;
+  background: none;
+  border: 10;
+  border-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.header-heading {
+  display: flex;
+  height: 800px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+}
+.header-heading-p {
+  font-size: 60px;
+  font-weight: lighter;
+}
+.header-heading-bold {
+  font-weight: bold;
+}
+
+.header-heading-trial {
+  padding: 30px 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+.common-button {
+  padding: 12px 30px;
+  border-radius: 15px;
+  border-color: white;
+  background-color: #b71500;
+  color: white;
+}
+.globe-syb {
+  padding-top: 4px;
+  position: fixed;
+  top: 0;
+  padding-top: 25px;
+  right: 80px;
+  cursor: pointer;
+}
+.hide-nav-li {
+  padding-top: 3px;
+}
+.hide-nav-li-mob {
+  padding: 10px 0;
+}
+.hamb {
+  display: none;
+  cursor: pointer;
+}
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+}
+
 /** Carousel CSS */
 .slideshow-container {
   max-width: 1000px;
@@ -154,4 +276,70 @@
 
 #section-three-content-right > img {
   height: 675px;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #333333;
+  color: #fff;
+  display: flex;
+}
+.footer-1 {
+  flex: 2;
+  margin: 0 30px;
+}
+.footer-2 {
+  flex: 1;
+  margin: 0 30px;
+}
+.social-links {
+  padding: 20px;
+  display: flex;
+}
+.social-links li {
+  padding: 0 10px;
+}
+/* for nav */
+@media (max-width: 900px) {
+  .globe-syb {
+    right: 30px;
+  }
+  .hamb {
+    display: flex;
+    position: fixed;
+    top: 0;
+    padding-top: 25px;
+    right: 60px;
+  }
+  .hide-nav-li {
+    display: none;
+  }
+  .hide-nav-li-eng {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .header-heading-p {
+    font-size: 25px;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footer-2 {
+    flex: 1;
+    margin: 20px 30px;
+  }
+}
+@media (max-width: 560px) {
+  .header-heading-p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .header-heading-p {
+    font-size: 15px;
+  }
+  .header-heading-trial {
+    font-size: 20px;
+  }
 }
